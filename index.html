@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Crown Hotel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== LOGO SECTION START ===== -->
+<header class="header">
+    <div class="logo">
+        👑 Royal Crown Hotel
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="menu-toggle">
+            ☰
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Welcome To Royal Crown Hotel</h1>
+        <p>Luxury • Comfort • Premium Experience</p>
+        <button class="hero-btn">Explore Rooms</button>
+    </div>
+
+</section>
+
+<!-- ROOMS SECTION -->
+<section class="rooms">
+
+    <h2 class="section-title">Our Premium Rooms</h2>
+
+    <div class="room-container">
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Single Room">
+            <h3>Single Room</h3>
+            <p>₹1500 / Night</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a" alt="Double Room">
+            <h3>Double Room</h3>
+            <p>₹3000 / Night</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Suite Room">
+            <h3>Suite Room</h3>
+            <p>₹6000 / Night</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking">
+
+    <h2 class="section-title">Book Your Room</h2>
+
+    <div class="booking-box">
+
+        <label>Check-In Date</label>
+        <input type="date" id="checkin">
+
+        <label>Check-Out Date</label>
+        <input type="date" id="checkout">
+
+        <label>Select Room</label>
+        <select id="roomType">
+            <option value="1500">Single Room - ₹1500</option>
+            <option value="3000">Double Room - ₹3000</option>
+            <option value="6000">Suite Room - ₹6000</option>
+        </select>
+
+        <button class="calculate-btn">Calculate Total</button>
+
+        <div class="total-box">
+            <p id="result">Total Amount: ₹0</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- ===== LOGO SECTION END ===== -->
+
+<script src="app.js"></script>
+</body>
+</html>
+
