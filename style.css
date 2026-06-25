@@ -1,0 +1,293 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+body{
+    font-family:Arial, sans-serif;
+}
+
+/* Header */
+.header{
+    width:100%;
+    padding:20px;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Logo */
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+.logo:hover{
+    color:gold;
+}
+
+/* Responsive Mobile */
+@media(max-width:768px){
+    .logo{
+        font-size:20px;
+    }
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+/* Nav Links */
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        background:black;
+        position:absolute;
+        top:70px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
+
+/* Hero Section */
+.hero{
+    width:100%;
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1501117716987-c8e1ecb210e0?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+/* Dark Overlay */
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    top:0;
+    left:0;
+}
+
+/* Hero Content */
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* Hero Button */
+.hero-btn{
+    padding:12px 30px;
+    font-size:18px;
+    background:gold;
+    color:black;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:28px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+}
+
+/* Rooms Section */
+.rooms{
+    padding:80px 50px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:50px;
+}
+
+.room-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.room-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.room-card:hover{
+    transform:translateY(-10px);
+}
+
+.room-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.room-card h3{
+    margin:15px 0;
+}
+
+.room-card p{
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.book-btn{
+    padding:10px 20px;
+    margin-bottom:20px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:gold;
+    color:black;
+}
+
+/* Tablet */
+@media(max-width:992px){
+    .room-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .room-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* Booking Section */
+.booking{
+    padding:80px 20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.booking-box{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background:#f5f5f5;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-box input,
+.booking-box select{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.calculate-btn{
+    padding:10px;
+    background:black;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.calculate-btn:hover{
+    background:gold;
+    color:black;
+}
+
+.total-box{
+    margin-top:15px;
+    font-weight:bold;
+}
